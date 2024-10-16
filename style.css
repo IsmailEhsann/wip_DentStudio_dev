@@ -1,0 +1,716 @@
+/* Colour Palette:
+    Light Warm Beige: #F0E9E6 - Dont Use (Use white)
+    Dark Gray-Blue: #272E36
+    Deep Charcoal: #191F25
+    Light Gray: #B1B2B9
+    Mid Gray: #5B5D62
+    Soft Gray-Blue: #9095A1
+*/
+
+@font-face {
+    font-family: Playfair;
+    src: url(PlayfairDisplay-VariableFont_wght.ttf);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Playfair;
+
+    /* min-height: 100vh; */
+    background-color: white;
+}
+/* --------------------------------------------------- */
+/* header {
+    padding: 10px;
+    background-color:#191F25;
+} */
+
+/* .logo {
+    font-size: 30px;
+} */
+
+.new-logo {
+    height: auto;
+    width: 100px;
+}
+
+nav {
+    padding: 0px;
+    background-color:#191F25;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+
+    /* position: fixed; */
+    width: 100%;
+}
+
+nav ul {
+    width: 100%;
+    /* Flexbox properties: */
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+nav li:hover {
+    background-color: #272E36;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.nav-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #272E36;
+    color:#B1B2B9;
+
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+}
+
+/* .nav-2 .tag {
+    display: flex;
+    align-items: center;
+}
+
+.nav-2 .tag p {
+    font-variation-settings: "wght" 700;
+} */
+
+.nav-2 .socials {
+    display: flex;
+    align-items: center;
+    /* padding: 10px; */
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    padding-top: 3px;
+}
+
+.social-icons a {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.icon {
+    color:#B1B2B9;
+}
+
+
+.nav-2 img {
+    height: auto;
+    width: 20px;
+}
+
+/* --------------------------------------------------- */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 1000;
+    /* Change sidebar colour to white later if want */
+    background-color: #5B5D62;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    /* Flexbox properties: */
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.tab-container {
+    display: flex;
+}
+
+.sidebar li {
+    width: 100%;
+}
+.sidebar a {
+    width: 100%;
+}
+
+.sidebar a:hover {
+    background: #191F25;
+}
+
+/* --------------------------------------------------- */
+.menu-button {
+    display: none;
+}
+
+@media(max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+}
+
+@media(max-width: 400px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+
+/* --------------------------------------------------- */
+.hero-image {
+    background-image: url('Images/studio_dental_space-2.jpeg');
+
+    height: 85vh;
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    box-shadow: 0 3000px rgba(38, 34, 53, 0.4) inset;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.display {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+
+}
+
+.display h2 {
+    font-size: 50px;
+    /* padding: 5px; */
+}
+
+.display-slogan {
+    padding-left: 30px;
+}
+
+/* --------------------------------------------------- */
+/* main {
+    margin-left: 10%;
+    margin-right: 10%;
+} */
+
+/* --------------------------------------------------- */
+.introduction {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    width: 100%;
+}
+
+.two-column {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
+
+    background-color: #272E36;
+    color: #B1B2B9;
+    height: 600px;
+    width: 750px;
+    /* max-width: 750px; */
+
+    overflow: hidden;
+}
+
+.left-column, .right-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.left-column {
+    flex: 1;
+    align-items: flex-start;
+}
+
+.right-column {
+    flex: 2;
+    align-items: flex-start;
+    text-align: center;
+
+    height: 600px;
+    width: 400px;
+    /* max-width: 800px; */
+    padding: 10px;
+
+    background-color: #191F25;
+}
+
+.profile-section img {
+    text-indent: -100vw;
+    overflow: hidden;
+
+    width: 6cm;
+    height: 8cm;
+    margin-bottom: 0cm;
+    /* border-radius: 50%; */
+    /* border: 10px solid white; */
+    object-fit: cover;
+    object-position: 50% 25%;
+    box-shadow: 10px 10px #5B5D62;
+
+}
+
+.right-column h6 {
+    font-size: 20px;
+    font-feature-settings: "wght" 600;
+    padding-bottom: 5px;
+
+}
+
+.right-column p {
+    font-size: 15px;
+}
+
+.profile-section a {
+    text-indent: -9999px;
+}
+
+/* --------------------------------------------------- */
+/* About Us */
+
+.about-us {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    width: 100%;
+}
+
+.what-we-do {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-color: #272E36;
+    color: #B1B2B9;
+    height: 500px;
+    width: 900px;
+    /* max-width: 750px; */
+    overflow: hidden;
+}
+
+.what-we-do h4 {
+    padding: 5px;
+    font-size: 30px;
+    background-color: #191F25;
+    width: 100%;
+}
+
+.about-us-description {
+    padding: 10px;
+}
+
+.about-us-description p {
+    padding: 5px;
+    font-size: 15px;
+    width: 500px;
+    /* background-color: #191F25; */
+}
+
+.what-we-do-btn {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    /* margin-bottom: 10px; */
+}
+
+.what-we-do-btn button {
+    padding: 5px;
+    margin-bottom: 10px;
+
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-radius: 6px;
+    /* text-decoration: none; */
+    /* font-variation-settings: "wght" 700; */
+    /* touch-action: manipulation; */
+    background-color: #191F25;
+    color: #5B5D62;
+    box-shadow:5px 5px #B1B2B9;
+
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.what-we-do-btn button:hover {
+    background-color: #B1B2B9;
+    color: #191F25;
+    box-shadow:5px 5px #272E36;
+}
+/* --------------------------------------------------- */
+/* Services */
+
+.services {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* padding: 20px; */
+    width: 100%;
+}
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-color: #272E36;
+    color: #191F25;
+    height: 500px;
+    width: 100%;
+    /* max-width: 750px; */
+    /* overflow: hidden; */
+}
+
+.service-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    margin: 0 auto;
+    background: #191F25;
+    height: 400px;
+
+    /* This width is the reason the cards originally didnt spread out. */
+    width: 90%;
+}
+
+.card {
+    background-color: white;
+    box-shadow: 5px 5px #5B5D62;
+    height: 600px;
+    width: 200px;
+    padding: 10px;
+
+    font-size: 10px;
+
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.card h4 {
+    padding-bottom: 5px;
+}
+/* --------------------------------------------------- */
+/* Appointments */
+.appointments {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* padding: 20px; */
+    width: 100%;
+}
+
+.appointments-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-color: #272E36;
+    /* color: #5B5D62; */
+    height: 600px;
+    width: 80%;
+}
+
+.appointments-container h4 {
+    background-color: #191F25;
+    color: #B1B2B9;
+    font-size: 30px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.booking-intro{
+    color: #5B5D62;
+    padding: 10px;
+    width: 400px;
+}
+
+.form-description {
+    color: #5B5D62;
+    /* width: 500px; */
+    /* padding-left: 5%;
+    padding-right: 5%; */
+    padding: 2%;
+    /* width: 400px; */
+    text-align: center;
+    background-color: #191F25;
+}
+
+.form-border {
+    border: 1px solid #5B5D62;
+    /* box-shadow: 1px 1px#5B5D62; */
+}
+
+.form-container {
+    padding: 5px;
+}
+
+.form-container hr {
+    border: 1px solid #5B5D62;
+    margin-bottom: 10px;
+}
+  
+input[type=text], input[type=number] {
+    width: 50%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    display: inline-block;
+    border: none;
+    background: white;
+}
+
+input[type=text]:focus, input[type=number]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.submit {
+    background-color: #5B5D62;
+    color: white;
+    padding: 15px 15px;
+    margin: 20px 0;
+    border: none;
+    cursor: pointer;
+    width: 80%;
+    opacity: 0.9;
+}
+  
+.submit:hover {
+    opacity:1;
+}
+
+/* --------------------------------------------------- */
+/* Pricing */
+.pricing {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* padding: 20px; */
+    width: 100%;
+}
+
+.pricing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    text-align: center;
+
+    background-color: #272E36;
+    box-shadow: 7.5px 7.5px #5B5D62;
+    /* border: 1px solid #5B5D62; */
+    /* color: #5B5D62; */
+    height: 100%;
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.pricing-container h4 {
+    background-color: #191F25;
+    color: #B1B2B9;
+
+    font-size: 30px;
+    width: 100%;
+}
+
+.pricing-services {
+    border: 1px solid #5B5D62;
+    /* padding: 10px; */
+}
+
+/* --------------------------------------------------- */
+/* Contact Us 1 */
+.contact-1 {
+    height: 100vh;
+    /* background-color: blue; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+
+    /* padding: 20px; */
+    width: 100%;
+}
+
+.contact-1 h2 {
+    text-align: center;
+}
+
+.faq {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 10px;
+
+    border-radius: 10px;
+
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item {
+    margin: 20px 0;
+}
+
+.faq-question {
+    width: 100%;
+    background-color: #191F25;
+    color: white;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #fff;
+    color: #191F25;
+    outline: auto;
+}
+
+.faq-answer {
+    display: none;
+
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #191F25;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+/* --------------------------------------------------- */
+/* Contact Us 2 */
+.contact-2 {
+    height: 50vh;
+    /* background-color: red; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+
+    /* padding: 20px; */
+    width: 100%;
+}
+
+.contact-2-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-info {
+    font-size: 20px;
+
+    padding: 30px;
+}
+
+.location {
+    padding-top: 15px;
+}
+
+
+
+
+
+
+/* --------------------------------------------------- */
+.footerContainer {
+    width: 100%;
+    padding: 20px 30px 20px;
+}
+
+.footerBottom {
+    text-align: center;
+}

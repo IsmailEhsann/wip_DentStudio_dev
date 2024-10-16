@@ -1,0 +1,146 @@
+HTML:
+<section class="appointments">
+            <!-- Do I need appointments-container? -->
+            <div class="appointments-container">
+                <div class="two-column-appoint">
+                    <div class="left-column-appoint">
+                        <h4>Book a consultation</h4>
+                        <p>Whether you're looking to discuss services tailored to your needs, pricing or general enquiries, book an appointment with us today!</p>
+                        <p>Speak to an expert!</p>
+                    </div>
+                    <div class="right-column-appoint">
+                        <div class="form-border">
+                            <form action="action_page.php">
+                                <div class="form-container">
+                                    <p>Fill out the form to book a consultation with us.</p>
+                                    <p>By submitting, you will be notified with an appointment via email or phone.</p>
+                                    <p>You are also automatically qualified for our weekly newsletter - can opt out at anytime.</p>
+                                    <hr>
+                              
+                                  
+                                    <input type="text" placeholder="Your Name" name="name" id="name" required>
+                                    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+                                    <input type="number" placeholder="Mobile Number" name="no." id="no." required>
+                                    <input type="text" placeholder="How can we help" name="form" id="form" required>
+                                    <hr>
+
+                                    <button type="submit" class="submit">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+CSS:
+/* Appointments */
+.appointments {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    width: 100%;
+}
+
+.appointments-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-color: #272E36;
+    color: #191F25;
+    height: 600px;
+    width: 100%;
+}
+
+.two-column-appoint {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #191F25;
+    color: #B1B2B9;
+    height: 500px;
+    width: 100%;
+    /* max-width: 750px; */
+
+    overflow: hidden;
+}
+
+.left-column-appoint .right-column-appoint {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* margin-left: 30px; */
+    /* margin-right: 30px; */
+}
+
+.left-column-appoint {
+    flex: 1;
+    align-items: flex-start;
+
+    /* width: 50%; */
+}
+
+.right-column-appoint {
+    flex: 2;
+    align-items: flex-start;
+    text-align: center;
+
+    /* height: auto; */
+    /* width: 50%; */
+    height: auto;
+    max-width: 75%;
+}
+
+.form-border {
+    border: 1px solid #5B5D62;
+}
+
+.form-container {
+    padding: 5px;
+}
+
+.form-container hr {
+    border: 1px solid #5B5D62;
+    margin-bottom: 10px;
+}
+  
+input[type=text], input[type=number] {
+    width: 50%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    display: inline-block;
+    border: none;
+    background: white;
+}
+
+input[type=text]:focus, input[type=number]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.submit {
+    background-color: #5B5D62;
+    color: white;
+    padding: 16px 20px;
+    margin: 5px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+  
+.submit:hover {
+    opacity:1;
+}
